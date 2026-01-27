@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Echoes</string>
+	<key>settings</key>
+	<array>
+		<!-- Global settings -->
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#000000</string>
+				<key>foreground</key>
+				<string>#ffffff</string>
+				<key>caret</key>
+				<string>#d70000</string>
+				<key>lineHighlight</key>
+				<string>#0a0a0a</string>
+				<key>selection</key>
+				<string>#2a0000</string>
+			</dict>
+		</dict>
+		
+		<!-- Comments -->
+		<dict>
+			<key>name</key>
+			<string>Comments</string>
+			<key>scope</key>
+			<string>comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#888888</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		
+		<!-- JSON Keys (white) -->
+		<dict>
+			<key>name</key>
+			<string>JSON Mapping Keys</string>
+			<key>scope</key>
+			<string>meta.mapping.key.json string.quoted.double.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- JSON String Values (grey) -->
+		<dict>
+			<key>name</key>
+			<string>JSON Mapping Values</string>
+			<key>scope</key>
+			<string>meta.mapping.value.json string.quoted.double.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aaaaaa</string>
+			</dict>
+		</dict>
+		
+		<!-- JSON Array Strings (grey) -->
+		<dict>
+			<key>name</key>
+			<string>JSON Array Strings</string>
+			<key>scope</key>
+			<string>meta.sequence.json string.quoted.double.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aaaaaa</string>
+			</dict>
+		</dict>
+		
+		<!-- JSON Numbers -->
+		<dict>
+			<key>name</key>
+			<string>JSON Numbers</string>
+			<key>scope</key>
+			<string>constant.numeric.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#cc0000</string>
+			</dict>
+		</dict>
+		
+		<!-- JSON Booleans and null -->
+		<dict>
+			<key>name</key>
+			<string>JSON Constants</string>
+			<key>scope</key>
+			<string>constant.language.json</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ff0000</string>
+			</dict>
+		</dict>
+		
+		<!-- Strings (default white for Python) -->
+		<dict>
+			<key>name</key>
+			<string>Strings</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Numbers -->
+		<dict>
+			<key>name</key>
+			<string>Numbers</string>
+			<key>scope</key>
+			<string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Keywords -->
+		<dict>
+			<key>name</key>
+			<string>Keywords</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Storage -->
+		<dict>
+			<key>name</key>
+			<string>Storage</string>
+			<key>scope</key>
+			<string>storage</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Function names -->
+		<dict>
+			<key>name</key>
+			<string>Function Names</string>
+			<key>scope</key>
+			<string>entity.name.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Class names -->
+		<dict>
+			<key>name</key>
+			<string>Class Names</string>
+			<key>scope</key>
+			<string>entity.name.class, entity.name.type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Variables -->
+		<dict>
+			<key>name</key>
+			<string>Variables</string>
+			<key>scope</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Support functions -->
+		<dict>
+			<key>name</key>
+			<string>Support Functions</string>
+			<key>scope</key>
+			<string>support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Constants -->
+		<dict>
+			<key>name</key>
+			<string>Constants</string>
+			<key>scope</key>
+			<string>constant.language</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Punctuation -->
+		<dict>
+			<key>name</key>
+			<string>Punctuation</string>
+			<key>scope</key>
+			<string>punctuation</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Invalid -->
+		<dict>
+			<key>name</key>
+			<string>Invalid</string>
+			<key>scope</key>
+			<string>invalid</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ff0000</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

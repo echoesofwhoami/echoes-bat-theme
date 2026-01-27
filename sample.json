@@ -1,0 +1,20 @@
+{
+  "name": "Echoes Theme",
+  "version": "1.0.0",
+  "description": "A red, white, and grey theme for bat",
+  "author": "echoes",
+  "colors": {
+    "background": "#000000",
+    "foreground": "#ffffff",
+    "accent": "#d70000"
+  },
+  "settings": {
+    "enabled": true,
+    "debug": false,
+    "maxItems": 100
+  },
+  "features": [
+    "custom colors",
+    "JSON support"
+  ]
+}
