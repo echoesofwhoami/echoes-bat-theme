@@ -2,6 +2,8 @@
 
 A minimalist dark theme for `bat` using only **red**, **white**, and **grey** colors.
 
+![Demo](demo.png)
+
 ## Status
 
 **🚧 Work in Progress**
