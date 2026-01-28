@@ -22,12 +22,12 @@
 			</dict>
 		</dict>
 		
-		<!-- Comments -->
+		<!-- Comment -->
 		<dict>
 			<key>name</key>
-			<string>Comments</string>
+			<string>Comment</string>
 			<key>scope</key>
-			<string>comment</string>
+			<string>comment, punctuation.definition.comment</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -37,10 +37,23 @@
 			</dict>
 		</dict>
 		
+		<!-- String -->
+		<dict>
+			<key>name</key>
+			<string>String</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
 		<!-- JSON Keys (white) -->
 		<dict>
 			<key>name</key>
-			<string>JSON Mapping Keys</string>
+			<string>JSON Keys</string>
 			<key>scope</key>
 			<string>meta.mapping.key.json string.quoted.double.json</string>
 			<key>settings</key>
@@ -53,7 +66,7 @@
 		<!-- JSON String Values (grey) -->
 		<dict>
 			<key>name</key>
-			<string>JSON Mapping Values</string>
+			<string>JSON String Values</string>
 			<key>scope</key>
 			<string>meta.mapping.value.json string.quoted.double.json</string>
 			<key>settings</key>
@@ -76,49 +89,23 @@
 			</dict>
 		</dict>
 		
-		<!-- JSON Numbers -->
+		<!-- Constant (numbers, booleans, null) -->
 		<dict>
 			<key>name</key>
-			<string>JSON Numbers</string>
+			<string>Constant</string>
 			<key>scope</key>
-			<string>constant.numeric.json</string>
+			<string>constant</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#cc0000</string>
+				<string>#d70000</string>
 			</dict>
 		</dict>
 		
-		<!-- JSON Booleans and null -->
+		<!-- Constant Numeric -->
 		<dict>
 			<key>name</key>
-			<string>JSON Constants</string>
-			<key>scope</key>
-			<string>constant.language.json</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ff0000</string>
-			</dict>
-		</dict>
-		
-		<!-- Strings (default white for Python) -->
-		<dict>
-			<key>name</key>
-			<string>Strings</string>
-			<key>scope</key>
-			<string>string</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ffffff</string>
-			</dict>
-		</dict>
-		
-		<!-- Numbers -->
-		<dict>
-			<key>name</key>
-			<string>Numbers</string>
+			<string>Constant Numeric</string>
 			<key>scope</key>
 			<string>constant.numeric</string>
 			<key>settings</key>
@@ -128,88 +115,10 @@
 			</dict>
 		</dict>
 		
-		<!-- Keywords -->
+		<!-- Constant Language (true, false, null, None, etc.) -->
 		<dict>
 			<key>name</key>
-			<string>Keywords</string>
-			<key>scope</key>
-			<string>keyword</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#d70000</string>
-			</dict>
-		</dict>
-		
-		<!-- Storage -->
-		<dict>
-			<key>name</key>
-			<string>Storage</string>
-			<key>scope</key>
-			<string>storage</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#d70000</string>
-			</dict>
-		</dict>
-		
-		<!-- Function names -->
-		<dict>
-			<key>name</key>
-			<string>Function Names</string>
-			<key>scope</key>
-			<string>entity.name.function</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#d70000</string>
-			</dict>
-		</dict>
-		
-		<!-- Class names -->
-		<dict>
-			<key>name</key>
-			<string>Class Names</string>
-			<key>scope</key>
-			<string>entity.name.class, entity.name.type</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ffffff</string>
-			</dict>
-		</dict>
-		
-		<!-- Variables -->
-		<dict>
-			<key>name</key>
-			<string>Variables</string>
-			<key>scope</key>
-			<string>variable</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#ffffff</string>
-			</dict>
-		</dict>
-		
-		<!-- Support functions -->
-		<dict>
-			<key>name</key>
-			<string>Support Functions</string>
-			<key>scope</key>
-			<string>support.function</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#d70000</string>
-			</dict>
-		</dict>
-		
-		<!-- Constants -->
-		<dict>
-			<key>name</key>
-			<string>Constants</string>
+			<string>Constant Language</string>
 			<key>scope</key>
 			<string>constant.language</string>
 			<key>settings</key>
@@ -219,16 +128,263 @@
 			</dict>
 		</dict>
 		
-		<!-- Punctuation -->
+		<!-- Constant Character Escape -->
 		<dict>
 			<key>name</key>
-			<string>Punctuation</string>
+			<string>Constant Character Escape</string>
 			<key>scope</key>
-			<string>punctuation</string>
+			<string>constant.character.escape</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Keyword -->
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Keyword Control -->
+		<dict>
+			<key>name</key>
+			<string>Keyword Control</string>
+			<key>scope</key>
+			<string>keyword.control</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Keyword Operator -->
+		<dict>
+			<key>name</key>
+			<string>Keyword Operator</string>
+			<key>scope</key>
+			<string>keyword.operator</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Keyword Declaration -->
+		<dict>
+			<key>name</key>
+			<string>Keyword Declaration</string>
+			<key>scope</key>
+			<string>keyword.declaration</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Storage Type (def, class, fn, let, var, etc.) -->
+		<dict>
+			<key>name</key>
+			<string>Storage Type</string>
+			<key>scope</key>
+			<string>storage.type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Storage Modifier -->
+		<dict>
+			<key>name</key>
+			<string>Storage Modifier</string>
+			<key>scope</key>
+			<string>storage.modifier</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Name (classes, functions, types) -->
+		<dict>
+			<key>name</key>
+			<string>Entity Name</string>
+			<key>scope</key>
+			<string>entity.name</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Name Function -->
+		<dict>
+			<key>name</key>
+			<string>Entity Name Function</string>
+			<key>scope</key>
+			<string>entity.name.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Name Tag (HTML/XML tags) -->
+		<dict>
+			<key>name</key>
+			<string>Entity Name Tag</string>
+			<key>scope</key>
+			<string>entity.name.tag</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Name Section -->
+		<dict>
+			<key>name</key>
+			<string>Entity Name Section</string>
+			<key>scope</key>
+			<string>entity.name.section</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Other Inherited Class -->
+		<dict>
+			<key>name</key>
+			<string>Entity Other Inherited Class</string>
+			<key>scope</key>
+			<string>entity.other.inherited-class</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Entity Other Attribute Name -->
+		<dict>
+			<key>name</key>
+			<string>Entity Other Attribute Name</string>
+			<key>scope</key>
+			<string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aaaaaa</string>
+			</dict>
+		</dict>
+		
+		<!-- Variable -->
+		<dict>
+			<key>name</key>
+			<string>Variable</string>
+			<key>scope</key>
+			<string>variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Variable Language (self, this, super) -->
+		<dict>
+			<key>name</key>
+			<string>Variable Language</string>
+			<key>scope</key>
+			<string>variable.language</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Variable Parameter -->
+		<dict>
+			<key>name</key>
+			<string>Variable Parameter</string>
+			<key>scope</key>
+			<string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+			</dict>
+		</dict>
+		
+		<!-- Variable Function -->
+		<dict>
+			<key>name</key>
+			<string>Variable Function</string>
+			<key>scope</key>
+			<string>variable.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Support (built-in functions, types) -->
+		<dict>
+			<key>name</key>
+			<string>Support</string>
+			<key>scope</key>
+			<string>support</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Support Function -->
+		<dict>
+			<key>name</key>
+			<string>Support Function</string>
+			<key>scope</key>
+			<string>support.function</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+			</dict>
+		</dict>
+		
+		<!-- Support Type -->
+		<dict>
+			<key>name</key>
+			<string>Support Type</string>
+			<key>scope</key>
+			<string>support.type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#aaaaaa</string>
 			</dict>
 		</dict>
 		
@@ -244,6 +400,34 @@
 				<string>#ff0000</string>
 				<key>fontStyle</key>
 				<string>bold</string>
+			</dict>
+		</dict>
+		
+		<!-- Invalid Deprecated -->
+		<dict>
+			<key>name</key>
+			<string>Invalid Deprecated</string>
+			<key>scope</key>
+			<string>invalid.deprecated</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ff0000</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		
+		<!-- Punctuation -->
+		<dict>
+			<key>name</key>
+			<string>Punctuation</string>
+			<key>scope</key>
+			<string>punctuation</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
 			</dict>
 		</dict>
 	</array>
