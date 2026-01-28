@@ -22,15 +22,6 @@ class DataProcessor:
         self.metadata: Dict[str, any] = {}
     
     def process_data(self, data: List[str]) -> Optional[str]:
-        """
-        Process a list of data items.
-        
-        Args:
-            data: List of strings to process
-            
-        Returns:
-            Processed result or None if failed
-        """
         if not data:
             return None
             
