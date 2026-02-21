@@ -1,0 +1,158 @@
+# Application Configuration File
+app:
+  name: "Echoes Web Application"
+  version: "2.1.0"
+  environment: "production"
+  debug: false
+  timezone: "UTC"
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+  workers: 4
+  timeout: 30
+  keep_alive: true
+  max_connections: 1000
+
+database:
+  primary:
+    host: "localhost"
+    port: 5432
+    name: "echoes_prod"
+    username: "echoes_user"
+    password: "${DB_PASSWORD}"
+    ssl: true
+    pool:
+      min: 5
+      max: 20
+      idle_timeout: 300
+      connection_timeout: 30
+  
+  replica:
+    host: "replica.example.com"
+    port: 5432
+    name: "echoes_prod_replica"
+    username: "readonly_user"
+    password: "${REPLICA_PASSWORD}"
+    ssl: true
+
+redis:
+  host: "redis.example.com"
+  port: 6379
+  password: "${REDIS_PASSWORD}"
+  database: 0
+  cluster:
+    enabled: true
+    nodes:
+      - "redis-1.example.com:6379"
+      - "redis-2.example.com:6379"
+      - "redis-3.example.com:6379"
+
+logging:
+  level: "info"
+  format: "json"
+  outputs:
+    - type: "console"
+      enabled: true
+    - type: "file"
+      enabled: true
+      path: "/var/log/echoes/app.log"
+      max_size: "100MB"
+      max_files: 10
+    - type: "syslog"
+      enabled: false
+      facility: "daemon"
+
+security:
+  jwt:
+    secret: "${JWT_SECRET}"
+    expiration: "24h"
+    refresh_expiration: "7d"
+  
+  cors:
+    enabled: true
+    origins:
+      - "https://echoes.example.com"
+      - "https://app.echoes.com"
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+    headers: ["Content-Type", "Authorization"]
+    credentials: true
+  
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst: 200
+    whitelist:
+      - "127.0.0.1"
+      - "10.0.0.0/8"
+
+features:
+  analytics:
+    enabled: true
+    tracking_id: "GA-123456789"
+  
+  notifications:
+    email:
+      enabled: true
+      smtp:
+        host: "smtp.example.com"
+        port: 587
+        username: "noreply@example.com"
+        password: "${SMTP_PASSWORD}"
+        tls: true
+    
+    push:
+      enabled: true
+      service: "fcm"
+      key: "${FCM_SERVER_KEY}"
+  
+  caching:
+    enabled: true
+    ttl: 300
+    strategies:
+      - "memory"
+      - "redis"
+
+monitoring:
+  metrics:
+    enabled: true
+    port: 9090
+    path: "/metrics"
+  
+  health_checks:
+    enabled: true
+    path: "/health"
+    checks:
+      - name: "database"
+        timeout: 5
+      - name: "redis"
+        timeout: 3
+      - name: "external_api"
+        timeout: 10
+        url: "https://api.example.com/health"
+
+storage:
+  local:
+    path: "/var/lib/echoes/uploads"
+    max_size: "1GB"
+  
+  s3:
+    enabled: true
+    bucket: "echoes-uploads"
+    region: "us-west-2"
+    access_key: "${AWS_ACCESS_KEY}"
+    secret_key: "${AWS_SECRET_KEY}"
+    cdn_url: "https://cdn.echoes.com"
+
+webhooks:
+  - name: "user_created"
+    url: "https://api.example.com/webhooks/user"
+    events: ["user.created"]
+    secret: "${WEBHOOK_SECRET}"
+    retry_attempts: 3
+  
+  - name: "payment_processed"
+    url: "https://payment.example.com/webhooks"
+    events: ["payment.completed", "payment.failed"]
+    secret: "${PAYMENT_WEBHOOK_SECRET}"
+    retry_attempts: 5

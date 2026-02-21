@@ -1,0 +1,47 @@
+2024-02-21 14:30:15.123 [INFO] Application starting up...
+2024-02-21 14:30:15.124 [INFO] Loading configuration from config.yaml
+2024-02-21 14:30:15.125 [DEBUG] Config loaded: {port: 8080, env: production, db: {host: localhost, port: 5432}}
+2024-02-21 14:30:15.126 [INFO] Database connection pool initialized (max: 20, min: 5)
+2024-02-21 14:30:15.127 [INFO] Redis connection established
+2024-02-21 14:30:15.128 [INFO] HTTP server listening on port 8080
+2024-02-21 14:30:15.129 [INFO] Application startup completed successfully
+2024-02-21 14:30:20.001 [INFO] New request: GET /api/users?page=1&limit=10
+2024-02-21 14:30:20.002 [DEBUG] Query parameters: {page: "1", limit: "10"}
+2024-02-21 14:30:20.003 [DEBUG] Database query: SELECT * FROM users WHERE active = true ORDER BY created_at DESC LIMIT 10 OFFSET 0
+2024-02-21 14:30:20.004 [INFO] Request completed: 200 OK (15ms)
+2024-02-21 14:30:25.555 [WARN] Rate limit exceeded for IP: 192.168.1.100 (requests: 101, limit: 100)
+2024-02-21 14:30:30.111 [ERROR] Database connection failed: Connection timeout after 30s
+2024-02-21 14:30:30.112 [ERROR] Failed to execute query: SELECT * FROM orders WHERE user_id = 12345
+2024-02-21 14:30:30.113 [ERROR] Stack trace: Error: Connection timeout
+    at Database.query (/app/src/database.js:145:11)
+    at OrderService.getUserOrders (/app/src/services/order.js:78:20)
+    at OrderController.getOrders (/app/src/controllers/order.js:34:15)
+    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)
+2024-02-21 14:30:30.114 [INFO] Retrying database connection...
+2024-02-21 14:30:30.115 [INFO] Database connection restored
+2024-02-21 14:30:35.222 [INFO] Background job started: cleanup_expired_sessions
+2024-02-21 14:30:35.223 [DEBUG] Found 42 expired sessions
+2024-02-21 14:30:35.224 [INFO] Cleaned up 42 expired sessions
+2024-02-21 14:30:35.225 [INFO] Background job completed: cleanup_expired_sessions (duration: 3ms)
+2024-02-21 14:30:40.333 [INFO] WebSocket connection established: client_id_abc123
+2024-02-21 14:30:40.334 [DEBUG] WebSocket message received: {"type": "subscribe", "channel": "notifications"}
+2024-02-21 14:30:40.335 [INFO] Client subscribed to notifications channel
+2024-02-21 14:30:45.444 [WARN] Memory usage high: 85% (used: 1.7GB, total: 2GB)
+2024-02-21 14:30:45.445 [INFO] Triggering garbage collection
+2024-02-21 14:30:45.446 [INFO] Memory usage after GC: 72% (used: 1.4GB, total: 2GB)
+2024-02-21 14:30:50.555 [ERROR] External API call failed: POST https://api.payment.com/charge
+2024-02-21 14:30:50.556 [ERROR] API response: 402 Payment Required {"error": "Insufficient funds", "code": "PAYMENT_FAILED"}
+2024-02-21 14:30:50.557 [ERROR] Payment processing failed for order #12345
+2024-02-21 14:30:50.558 [INFO] Sending failure notification to user: user@example.com
+2024-02-21 14:30:55.666 [INFO] Scheduled task: generate_daily_reports
+2024-02-21 14:30:55.667 [DEBUG] Generating reports for date: 2024-02-21
+2024-02-21 14:30:55.668 [INFO] Report generated: daily_sales_2024-02-21.pdf (size: 2.3MB)
+2024-02-21 14:30:55.669 [INFO] Email sent: daily report to admin@company.com
+2024-02-21 14:31:00.777 [CRITICAL] Security alert: Multiple failed login attempts
+2024-02-21 14:31:00.778 [CRITICAL] IP blocked: 203.0.113.45 (attempts: 5, duration: 300s)
+2024-02-21 14:31:00.779 [INFO] Security notification sent to administrators
+2024-02-21 14:31:05.888 [INFO] Cache invalidation: user_profile_12345
+2024-02-21 14:31:05.889 [DEBUG] Cache cleared for 3 keys
+2024-02-21 14:31:05.890 [INFO] Cache warmed up for user: 12345
+2024-02-21 14:31:10.999 [INFO] Health check passed: all systems operational
+2024-02-21 14:31:10.1000 [DEBUG] Metrics: {uptime: 3600s, requests: 15420, errors: 12, avg_response_time: 45ms}
