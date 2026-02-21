@@ -270,9 +270,26 @@
 			<dict>
 				<key>foreground</key>
 				<string>#d70000</string>
+				<key>fontStyle</key>
+				<string>italic</string>
 			</dict>
 		</dict>
 		
+		<!-- HTML Tag Names (not bold) -->
+		<dict>
+			<key>name</key>
+			<string>HTML Tag Names</string>
+			<key>scope</key>
+			<string>entity.name.tag.html, entity.name.tag.xml, meta.tag.sgml.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#d70000</string>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+				
 		<!-- Entity Name Section -->
 		<dict>
 			<key>name</key>
@@ -447,6 +464,21 @@
 				<string>#ffffff</string>
 				<key>fontStyle</key>
 				<string>bold</string>
+			</dict>
+		</dict>
+		
+		<!-- HTML Tag Symbols (< and >) -->
+		<dict>
+			<key>name</key>
+			<string>HTML Tag Symbols</string>
+			<key>scope</key>
+			<string>punctuation.definition.tag.html, punctuation.definition.tag.xml, meta.tag.sgml.html punctuation.definition.tag, punctuation.definition.tag.begin.html, punctuation.definition.tag.end.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>italic</string>
 			</dict>
 		</dict>
 		
