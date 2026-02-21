@@ -46,7 +46,20 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#FF5252</string>
+			</dict>
+		</dict>
+		
+		<!-- String Quotes/Punctuation -->
+		<dict>
+			<key>name</key>
+			<string>String Quotes</string>
+			<key>scope</key>
+			<string>punctuation.definition.string, string.quoted punctuation.definition.string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#FF5252</string>
 			</dict>
 		</dict>
 		
@@ -229,6 +242,8 @@
 			<dict>
 				<key>foreground</key>
 				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>bold</string>
 			</dict>
 		</dict>
 		
@@ -241,7 +256,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#d70000</string>
+				<string>#ffffff</string>
 			</dict>
 		</dict>
 		
@@ -332,7 +347,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#ffffff</string>
+				<string>#d6d6d6</string>
 			</dict>
 		</dict>
 		
@@ -371,7 +386,9 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#d70000</string>
+				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>bold</string>
 			</dict>
 		</dict>
 		
@@ -428,8 +445,41 @@
 			<dict>
 				<key>foreground</key>
 				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>bold</string>
 			</dict>
 		</dict>
+		
+		<!-- Parentheses and Brackets -->
+		<dict>
+			<key>name</key>
+			<string>Parentheses and Brackets</string>
+			<key>scope</key>
+			<string>punctuation.definition.brackets, punctuation.definition.group, punctuation.definition.parameters, punctuation.section.parens, punctuation.section.brackets, punctuation.section.braces</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
+		<!-- TypeScript Types -->
+		<dict>
+			<key>name</key>
+			<string>TypeScript Types</string>
+			<key>scope</key>
+			<string>entity.name.type.ts, support.type.primitive.ts</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#ffffff</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+
 	</array>
 </dict>
 </plist>

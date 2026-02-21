@@ -1,0 +1,23 @@
+::root {
+
+  --color-dark-red: #2a0000;
+  --color-red: #d70000;
+  --color-light-red: #ff0000;
+  --color-strings: #FD5465;
+  --color-yellow: #ffff00;
+  --color-test: #bb3b03;
+
+  --color-black: #000000;
+  --color-gray: #0a0a0a;
+  --color-darker-gray: #888888;
+  --color-light-gray: #aaaaaa;
+  --color-lighter-gray: #d6d6d6;
+  --color-white: #ffffff;
+  --color-red-1: #850000;
+  --color-red-2: #AF0000;
+  --color-red-3: #D70000;
+  --color-red-4: #FB2121;
+  --color-red-5: #FF5252;
+}
+
+

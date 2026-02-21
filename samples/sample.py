@@ -72,5 +72,10 @@ def main():
     else:
         print("Something went wrong")
 
+# Context manager example with lambda
+with open('file.txt', 'r') as f:
+    content = (lambda x: x.read())(f)
+    
+
 if __name__ == "__main__":
     main()

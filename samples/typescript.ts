@@ -7,9 +7,9 @@ interface User {
 }
 
 enum Role {
-    ADMIN = 'admin',
-    USER = 'user',
-    MODERATOR = 'moderator'
+    ADMIN = "admin",
+    USER = "user",
+    MODERATOR = "moderator"
 }
 
 class UserService {
